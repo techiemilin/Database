@@ -1,0 +1,5 @@
+select contacts.contact name, contacts.main sales person as Primary sales person, contacts.Backup sales person as Secondary sales person 
+from contacts 
+left join salespeople
+ on contacts.field name = salespeople.field name 
+ where contacts.contact name
