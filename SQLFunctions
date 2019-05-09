@@ -1,0 +1,93 @@
+******************************************
+
+	1) SQL Built-in Functions
+	2) User-Define Functions
+	
+	( in oracle DUAL is table which is default) Dummy table with one row and one column
+******************************************
+
+	1) SQL Built-in Functions
+	
+	***Two types***
+	
+	(1)Group  Functions (Multiple row)
+	(2)Scalar Functions (Single row)
+	
+	***************
+	
+	(1)Group Functions ( can be applied to group of rows) 
+	
+	SELECT * FROM EMPLOYEES;
+	
+	AVG()--- SELECT AVE(SALARY) FROM EMPLOYEES;
+	SUM()---SELECT SUM(SALARY) FROM EMPLOYEES;
+	MAX()---SELECT MAX(SALARY) FROM EMPLOYEES;
+	MIN()---SELECT MIN(SALARY) FROM EMPLOYEES;
+	COUNT()---SELECT COUNT(*) FROM EMPLOYEES;
+	
+	***************
+	
+	***************
+	
+	(2) Scalar Functions (Single row)
+	
+	Character function
+	Number/Numeric function
+	Date function
+	conversion function
+	
+	Character function
+	select upper('oracle') from dual;
+	
+	select * from employees
+	select UPPER (First_name) from employees; UPPER() CONVERT UPPERCASE 
+	select LOWER (First_name) from employees; LOWER() COVERT LOWER CASE
+	select INITCAP(FIRST_NAME) FROM EOMPLOYEES; CONVERT FIRST LETTER INTO CAPITAL 
+	select (*) FROM EMPLOYEES WHERE (FIRST_NAME) LENGTH = 4	- It will give employees with first name with 4 characters 
+	Select RPAD ('oracle', 10, 'Z') from dual = it will put z and make the string of 10 characters (RIGHT SIDE)
+	SELECT LPAD ('ORACLE', 10, 'X') FROM DUAL = IT WILL PUT X BEFORE THE STRING AND MAKE STRING TO 10 CHARACTERS  ( LEFT SIDE)
+	SELECR LTRIM ('ZZORACLE') FROM DUAL = TRIM THE STRING FROM LEFT SIDE
+	SELECT RTRIM( ('ORACLEZZ) FROM DUAL = TRIM THE STRING FROM RIGHT SIDE
+	TRIM -BOTH SIDE 
+	
+	SELECT * FROM EMPLYEES;
+	SELECT CONCAT (FIRST_NAME,LAST_NAME) FROM EMPLOYEES 
+	
+	
+	
+	Formating of Date 
+	
+	SELECT * from EMPLOYEES
+	SELECT FIRST_NAME, EMPLOYEE_ID, HIRE_DATE FROM EMPLOYEES; (TABLE)
+	SELECT FIRST_NAME, EMPLOYEE_ID, TO_CHAR(HIRE_DATE, 'DD-MM-YYYY') FROM EMPLOYEES  15-01-1990
+	SELECT FIRST_NAME, EMPLOYEE_ID, TO_CHAR(HIRE_DATE, 'DD-MON-YYYY') FROM EMPLOYEES 15-JAN-19
+	SELECT FIRST_NAME, EMPLOYEE_ID, TO_CHAR(HIRE_DATE, 'DD-MM-YY') FROM EMPLOYEES    15-O1-90
+	
+	
+	SELECT SYSDATE FROM DUAL;
+	
+	SELECT TO_CHAR(SYSDATE, 'DAY') FROM DUAL
+	SELECT TO_CHAR(SYSDATE, 'MON') FROM DUAL
+	SELECT TO_CHAR(SYSDATE, 'YYYY') FROM DUAL
+	
+	
+	 SELECT * FROM EMPLOYEES WHERE TO_CHAR(HIRE_DATE, 'YY') = '98'
+	 SELECT * FROM EMPLOYEES WHERE TO_CHAR(HIRE_DATE, 'YYYY') = '1998'
+	  
+	 SELECT * FROM EMPLOYEES WHERE TO_CHAR (HIRE_DATE,'MON') = 'FEB'
+	 SELECT * FROM EMPLOYEES WHERE TO_CHAR (HIRE_DATE,'MM') = '02'
+	 
+	 
+	 $1400- Remove $ sign and convert it into a number 
+	 SELECT LTRIM('$1400','$') FROM DUAL - REMOVE THE $ SIGN
+	 SELECT TO_NUMBER(LTRIM($1400','$') REMOVE THE $ AND CONVERT THE STRING INTO NUMBER 
+	  
+	  
+	 
+	
+	 
+	
+	
+	
+	
+	

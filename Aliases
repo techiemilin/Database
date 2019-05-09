@@ -1,0 +1,40 @@
+SQL aliases are used to give a table, or a column in a table, a temporary name.
+
+Aliases are often used to make column names more readable.
+
+An alias only exists for the duration of the query.
+
+*****************************************************************************************************************
+
+Alias Column Syntax
+SELECT column_name AS alias_name
+FROM table_name;
+
+The following SQL statement creates two aliases, one for the CustomerID column and one for the CustomerName column:
+
+SELECT CustomerID AS ID, CustomerName AS Customer
+FROM Customers;
+
+*****************************************************************************************************************
+
+*****************************************************************************************************************
+
+Alias Table Syntax
+SELECT column_name(s)
+FROM table_name AS alias_name;
+
+The following SQL statement creates two aliases, one for the CustomerName column and one for the ContactName column.
+ Note: It requires double quotation marks or square brackets if the alias name contains spaces:
+
+Example:
+SELECT CustomerName AS Customer, ContactName AS [Contact Person]
+FROM Customers;
+
+The following SQL statement creates an alias named "Address" that combine four columns (Address, PostalCode, City and Country):
+
+Example
+SELECT CustomerName, Address + ', ' + PostalCode + ' ' + City + ', ' + Country AS Address
+FROM Customers;
+
+*****************************************************************************************************************
+

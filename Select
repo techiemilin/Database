@@ -1,0 +1,25 @@
+
+
+**********************************************************************
+
+SELECT column1, column2, ...
+FROM table_name;     // to select columns from table
+
+Example: SELECT CustomerName, City FROM Customers;
+
+**********************************************************************
+
+**********************************************************************
+
+SELECT * FROM table_name;
+
+// to select all the records from table
+
+Example: SELECT * FROM Customers;
+
+**********************************************************************
+
+
+
+
+

@@ -1,0 +1,14 @@
+*****************************************
+
+
+Connect to Database
+
+    click on plus or add connection button
+    give the connection details
+	Host name 
+	port number
+	user ID 
+	password 
+	SID (service ID) for SQL 
+	
+******************************************

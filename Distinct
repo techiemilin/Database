@@ -1,0 +1,22 @@
+
+
+**********************************************************************
+
+SELECT DISTINCT column1, column2, ...
+FROM table_name;  
+
+// to select distinct values
+
+Example:- SELECT Country FROM Customers;
+
+**********************************************************************
+
+
+**********************************************************************
+
+SELECT COUNT(DISTINCT Country) FROM Customers;
+
+// to count  how many distinct values in columns
+
+
+**********************************************************************
